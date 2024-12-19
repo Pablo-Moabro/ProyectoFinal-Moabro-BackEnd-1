@@ -1,0 +1,57 @@
+<header class="home">
+    <h1>Home - Productos</h1>
+</header>
+
+<section class="container-home">
+    
+    <h2 class="sub-title">Guitarras</h2>
+    
+    <div div class="container-home__primary">
+        
+        <div class="container-home__sort">
+            
+            <div>
+                <span>Orden por precio</span>
+                <button class="btn_sort" id="sort-asc">Ascendente</button>
+                <button class="btn_sort" id="sort-desc">Descendente</button>
+                <button class="btn_sort" id="sort-none">Sin orden</button>
+            </div>
+            
+            <div class="container-home__pagination">
+                <span>Página <span id="current-page">x</span> de <span id="total-pages">x</span></span>
+                <button class="btn_pagination" id="prev-page">Página anterior</button>
+                <button class="btn_pagination" id="next-page">Página siguiente</button>
+            </div>
+        
+        </div>
+
+        <div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="products-list">
+
+                </tbody>
+            </table>
+        </div> 
+
+        <div class="container-home__cart">
+            <button class="btn_go_to_cart" id="go-to-cart">Ir al carrito</button>
+            <button class="btn_clear_cart" id="clear-cart">Vaciar carrito</button>
+            <button class="btn_refresh_products_list" id="btn-refresh-products-list">Actualizar Lista</button>
+        
+        </div>   
+    </div>
+  
+</section>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/api/public/js/products.js"></script>
